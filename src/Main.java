@@ -6,6 +6,13 @@ public class Main {
 
     //Метод вывода двух матриц
     public static void main(String [] args){
+        int[][] colors = createMatrix(SIZE, SIZE);
+
+        System.out.println("Первоначальная матрица: ");
+        printMatrix(colors);
+
+        System.out.println("\nПеревернутая матрица: ");
+        printMatrix(rotateMatrix(colors));
 
     }
 
@@ -34,6 +41,15 @@ public class Main {
         }
 
         return rotated;
+    }
+
+    private static void printMatrix(int [][] colors){
+        for (int[] row : colors) {
+            for (int value : row){
+                System.out.printf("%4d ", value);
+            }
+            System.out.println();
+        }
     }
 
 
